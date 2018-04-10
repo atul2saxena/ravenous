@@ -64,7 +64,7 @@ getSortByClass(sortByOption) {
       let sortByOptionValue = this.sortByOptions[sortByOption];
       return (<li className={this.getSortByClass(sortByOptionValue)}
       key={sortByOptionValue}
-      onClick={this.handleSortByChange}> {sortByOption}</li>);
+      onClick={this.handleSortByChange.bind(this, sortByOptionValue) }> {sortByOption}</li>);
     });
   }
 
